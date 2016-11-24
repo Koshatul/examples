@@ -1,0 +1,6 @@
+
+0 8 * * *		( /usr/local/bin/rsnapshot -c /etc/rsnapshot/rsnapshot.conf sync; /usr/local/bin/rsnapshot -c /etc/rsnapshot/rsnapshot.conf hourly )
+0 20 * * *		( /usr/local/bin/rsnapshot -c /etc/rsnapshot/rsnapshot.conf sync; /usr/local/bin/rsnapshot -c /etc/rsnapshot/rsnapshot.conf hourly )
+50 1 * * *		/usr/local/bin/rsnapshot -c /etc/rsnapshot/rsnapshot.conf daily
+40 10 * * 0		/usr/local/bin/rsnapshot -c /etc/rsnapshot/rsnapshot.conf weekly
+30 1 1 * *		/usr/local/bin/rsnapshot -c /etc/rsnapshot/rsnapshot.conf monthly
